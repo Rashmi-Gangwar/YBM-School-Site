@@ -15,7 +15,7 @@ const ResetPassword = () => {
     e.preventDefault();
     await axios
       .put(
-        `http://localhost:4000/api/v1/password/reset/${token}`,
+        `https://ybm-school-site.onrender.com/api/v1/password/reset/${token}`,
         { password, confirmPassword },
         {
           withCredentials: true,

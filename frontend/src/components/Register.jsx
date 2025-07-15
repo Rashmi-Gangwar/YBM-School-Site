@@ -18,7 +18,7 @@ const Register = () => {
   const handleRegister = async (data) => {
     data.phone = `+91${data.phone}`;
     await axios
-      .post("http://localhost:4000/api/v1/register", data, {
+      .post("https://ybm-school-site.onrender.com/api/v1/register", data, {
         withCredentials: true,
         headers: { "Content-Type": "application/json" },
       })

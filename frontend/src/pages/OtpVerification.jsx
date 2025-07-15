@@ -36,10 +36,14 @@ const OtpVerification = () => {
       phone,
     };
     await axios
-      .post("http://localhost:4000/api/v1/otp-verification", data, {
-        withCredentials: true,
-        headers: { "Content-Type": "application/json" },
-      })
+      .post(
+        "https://ybm-school-site.onrender.com/api/v1/otp-verification",
+        data,
+        {
+          withCredentials: true,
+          headers: { "Content-Type": "application/json" },
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(true);
@@ -67,7 +71,7 @@ const OtpVerification = () => {
               {otp.map((digit, index) => {
                 return (
                   <input
-                  id={`otp-input-${index}`}
+                    id={`otp-input-${index}`}
                     type="text"
                     maxLength="1"
                     key={index}

@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     await axios
       .post(
-        "http://localhost:4000/api/v1/password/forgot",
+        "https://ybm-school-site.onrender.com/api/v1/password/forgot",
         { email },
         {
           withCredentials: true,

@@ -32,7 +32,9 @@ function App() {
   useEffect(() => {
     const getUser = async () => {
       await axios
-        .get("http://localhost:4000/api/v1/user/me", { withCredentials: true })
+        .get("https://ybm-school-site.onrender.com/api/v1/user/me", {
+          withCredentials: true,
+        })
         .then((res) => {
           setUser(res.data.user);
           setIsAuthenticated(true);
@@ -71,7 +73,7 @@ function App() {
           <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </main>
-      <ToastContainer theme="colored" /> 
+      <ToastContainer theme="colored" />
       <Footer />
     </>
   );
